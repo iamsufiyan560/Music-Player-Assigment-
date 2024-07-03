@@ -10,7 +10,7 @@ const Logo = () => {
 
   return (
     // lg:h-screen
-    <div className=" lg:relative lg:h-screen  z-50   ">
+    <div className=" lg:relative lg:h-screen md:hidden  sm:hidden xl:block lg:block hidden ">
       <div className="flex flex-row  ">
         <div className="flex gap-4 text-2xl font-bold p-8 pr-16 mr-8 text-white">
           <FaSpotify

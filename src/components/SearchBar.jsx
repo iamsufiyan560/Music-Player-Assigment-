@@ -7,7 +7,7 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => {
   const setSidebar = useSetRecoilState(sidebarAtom);
 
   return (
-    <div className="p-8 z-50 backdrop-blur-md sm:fixed w-auto  sm:w-[300px] lg:w-fit md:w-[400px]  fixed md:fixed lg:block lg:pt-8  sm:pt-2 pt-4   ">
+    <div className="p-8 z-50 backdrop-blur-lg sm:fixed w-auto  sm:w-[300px] lg:w-fit md:w-[400px]  fixed md:fixed lg:block lg:pt-8  sm:pt-2 pt-4   ">
       <div className="relative">
         <input
           className="p-2 pl-10 pr-8 w-full rounded-md bg-[#FFFFFF14] placeholder-white"

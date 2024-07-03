@@ -1,4 +1,3 @@
-import { useState } from "react";
 import ForYou from "./components/ForYou";
 import Logo from "./components/Logo";
 import displayColorAtom from "./atoms/colorAtom";
@@ -9,7 +8,7 @@ function App() {
   // lg-flex
   return (
     <div
-      className="sm:flex md:flex-col lg:flex-row  w-screen fixed   "
+      className="sm:flex md:flex-col lg:flex-row  w-screen fixed  "
       style={{
         backgroundColor: screeenColor,
       }}

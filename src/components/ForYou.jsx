@@ -7,6 +7,9 @@ import SongInfo from "./SongInfo";
 import { FaMusic } from "react-icons/fa";
 import sidebarAtom from "../atoms/sidebarAtom";
 import { useRecoilValue, useSetRecoilState } from "recoil";
+import MobileLogo from "./MobileLogo";
+import { RxCross1 } from "react-icons/rx";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const ForYou = () => {
   const [isForYou, setIsForYou] = useState(true);
@@ -40,7 +43,9 @@ const ForYou = () => {
   }, [selectedSong]);
 
   return (
-    <div className="md:pt-0 h-screen lg:pt-0 scroll-smooth hide-scrollbar">
+    <div className="md:pt-0 h-screen lg:pt-0 overflow-y-auto scroll-smooth hide-scrollbar">
+      <MobileLogo />
+
       <Title
         isForYou={isForYou}
         setIsForYou={setIsForYou}
@@ -53,12 +58,10 @@ const ForYou = () => {
         >
           <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
           <div
-            className={`flex-grow overflow-y-auto hide-scrollbar 
+            className={`flex-grow overflow-y-auto scroll-smooth hide-scrollbar 
           ${
-            !sideBar
-              ? "sm:hidden md:hidden lg:block hidden hide-scrollbar"
-              : "block hide-scrollbar"
-          } sm:block md:block hide-scrollbar `}
+            !sideBar ? "sm:hidden md:hidden lg:block hidden " : "block "
+          } sm:block md:block  `}
           >
             {isForYou ? (
               <SongList
@@ -87,7 +90,7 @@ const ForYou = () => {
               onSelectSong={setSelectedSong}
             />
           ) : (
-            <div className="h-screen lg:ml-24 md:ml-32 ">
+            <div className="h-screen lg:ml-24 md:ml-32 sm:ml-28 ml-20 fixed top-20 ">
               <div className="  text-white flex flex-col flex-grow   items-center justify-center h-full ">
                 <FaMusic size={50} className="mb-4" />
                 <p className="lg:text-2xl font-bold mb-2">No song selected</p>

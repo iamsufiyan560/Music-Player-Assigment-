@@ -20,7 +20,7 @@ const SongList = ({ searchTerm, onSelectSong, selectedSong }) => {
   );
 
   return (
-    <div className="p-4 md:pt-20  pt-24 sm:pt-16 lg:pt-28 h-screen ">
+    <div className="p-4 md:pt-20 z-10 pt-24 sm:pt-16 lg:pt-28 h-screen ">
       {filteredSongs.length === 0 ? (
         <div className="text-gray-400 mt-14 text-2xl items-center justify-center flex">
           No songs found.
@@ -29,7 +29,7 @@ const SongList = ({ searchTerm, onSelectSong, selectedSong }) => {
         filteredSongs.map((song) => (
           <div
             key={song.id}
-            className={`flex items-center justify-between mb-4 p-2 rounded-md h-20 cursor-pointer ${
+            className={`flex items-center  justify-between mb-4 p-2 rounded-md h-20 cursor-pointer ${
               selectedSong && selectedSong.id === song.id
                 ? "bg-[#FFFFFF14]"
                 : ""
