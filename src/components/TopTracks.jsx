@@ -18,7 +18,7 @@ const TopTracks = ({ searchTerm, onSelectSong, selectedSong }) => {
     return <div className="text-red-500">Error fetching data</div>;
   }
   return (
-    <div className="p-4 pt-20  sm:pt-20 lg:pt-24 h-screen">
+    <div className="p-4 md:pt-20  pt-24 sm:pt-16 lg:pt-28 h-screen ">
       {filteredTopTracks.length === 0 ? (
         <div className="text-gray-400 mt-14 text-2xl items-center justify-center flex">
           No top tracks found.
